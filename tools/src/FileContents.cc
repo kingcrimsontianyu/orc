@@ -17,6 +17,7 @@
  */
 
 #include "ToolsHelper.hh"
+#include "orc/Debug.hh"
 
 #include <iostream>
 #include <memory>
@@ -28,9 +29,11 @@ void printContents(const char* filename, const orc::RowReaderOptions& rowReaderO
   std::unique_ptr<orc::RowReader> rowReader;
   reader = orc::createReader(orc::readFile(std::string(filename), readerOpts.getReaderMetrics()),
                              readerOpts);
+  orc::Debugger::instance().getInfoFromReader(reader.get());
   rowReader = reader->createRowReader(rowReaderOpts);
 
-  std::unique_ptr<orc::ColumnVectorBatch> batch = rowReader->createRowBatch(1000);
+  std::unique_ptr<orc::ColumnVectorBatch> batch =
+      rowReader->createRowBatch(orc::Debugger::instance().getRowGroupStride());
   std::string line;
   std::unique_ptr<orc::ColumnPrinter> printer =
       createColumnPrinter(line, &rowReader->getSelectedType());
@@ -41,8 +44,8 @@ void printContents(const char* filename, const orc::RowReaderOptions& rowReaderO
       line.clear();
       printer->printRow(i);
       line += "\n";
-      const char* str = line.c_str();
-      fwrite(str, 1, strlen(str), stdout);
+      [[maybe_unused]] const char* str = line.c_str();
+      // fwrite(str, 1, strlen(str), stdout);
     }
   }
 }
@@ -67,5 +70,8 @@ int main(int argc, char* argv[]) {
       return 1;
     }
   }
+
+  orc::Debugger::instance().check();
+
   return 0;
 }

@@ -26,6 +26,7 @@
 #include "RLEV2Util.hh"
 #include "RLEv2.hh"
 #include "Utils.hh"
+#include "orc/Debug.hh"
 
 namespace orc {
 
@@ -40,6 +41,8 @@ namespace orc {
       bufferStart = const_cast<char*>(static_cast<const char*>(bufferPointer));
       bufferEnd = bufferStart + bufferLength;
     }
+
+    Debugger::instance().incrementByteCounter();
 
     unsigned char result = static_cast<unsigned char>(*bufferStart++);
     return result;
@@ -194,8 +197,11 @@ namespace orc {
       runLength += MIN_REPEAT;
       runRead = 0;
 
+      Debugger::instance().resetByteCounter();
       // read the repeated value which is store using fixed bytes
       literals[0] = readLongBE(byteSize);
+
+      Debugger::instance().addNewRL(byteSize * 8, runLength, "SHORT_REPEAT");
 
       if (isSigned) {
         literals[0] = unZigZag(static_cast<uint64_t>(literals[0]));
@@ -237,6 +243,9 @@ namespace orc {
       runRead = 0;
 
       readLongs(literals.data(), 0, runLength, bitSize);
+
+      Debugger::instance().addNewRL(bitSize, runLength, "DIRECT");
+
       if (isSigned) {
         for (uint64_t i = 0; i < runLength; ++i) {
           literals[i] = unZigZag(static_cast<uint64_t>(literals[i]));
@@ -388,6 +397,7 @@ namespace orc {
       ++runLength;  // account for first value
       runRead = 0;
 
+      Debugger::instance().resetByteCounter();
       int64_t prevValue;
       // read the first value stored as vint
       if (isSigned) {
@@ -401,6 +411,8 @@ namespace orc {
       // read the fixed delta value stored as vint (deltas can be negative even
       // if all number are positive)
       int64_t deltaBase = readVslong();
+
+      Debugger::instance().addNewRL(bitSize, runLength, "DELTA");
 
       if (bitSize == 0) {
         // add fixed deltas to adjacent values
@@ -438,6 +450,22 @@ namespace orc {
   uint64_t RleDecoderV2::copyDataFromBuffer(T* data, uint64_t offset, uint64_t numValues,
                                             const char* notNull) {
     uint64_t nRead = std::min(runLength - runRead, numValues);
+
+    // if (runRead != 0) {
+    //   std::string prefix;
+    //   if (Debugger::instance().isSec()) {
+    //     prefix = "SECOND";
+    //     std::cout << "--> " << prefix
+    //               << ": continue using the decompressed run from the last batch. Remaining: "
+    //               << runLength - runRead << ", numValues: " << numValues << "\n";
+    //   } else {
+    //     prefix = "NANO";
+    //     std::cout << "--> " << prefix
+    //               << ": continue using the decompressed run from the last batch. Remaining: "
+    //               << runLength - runRead << ", numValues: " << numValues << "\n";
+    //   }
+    // }
+
     if (notNull) {
       for (uint64_t i = offset; i < (offset + nRead); ++i) {
         if (notNull[i]) {

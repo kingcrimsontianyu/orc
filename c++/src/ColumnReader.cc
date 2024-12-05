@@ -24,6 +24,7 @@
 #include "ConvertColumnReader.hh"
 #include "RLE.hh"
 #include "SchemaEvolution.hh"
+#include "orc/Debug.hh"
 #include "orc/Exceptions.hh"
 
 #include <math.h>
@@ -314,12 +315,15 @@ namespace orc {
   }
 
   void TimestampColumnReader::next(ColumnVectorBatch& rowBatch, uint64_t numValues, char* notNull) {
+    Debugger::instance().incrementRGIdx();
     ColumnReader::next(rowBatch, numValues, notNull);
     notNull = rowBatch.hasNulls ? rowBatch.notNull.data() : nullptr;
     TimestampVectorBatch& timestampBatch = dynamic_cast<TimestampVectorBatch&>(rowBatch);
     int64_t* secsBuffer = timestampBatch.data.data();
+    Debugger::instance().setIsSec(true);
     secondsRle->next(secsBuffer, numValues, notNull);
     int64_t* nanoBuffer = timestampBatch.nanoseconds.data();
+    Debugger::instance().setIsSec(false);
     nanoRle->next(nanoBuffer, numValues, notNull);
 
     // Construct the values

@@ -17,6 +17,7 @@
  */
 
 #include "Reader.hh"
+#include <orc/Debug.hh>
 #include "Adaptor.hh"
 #include "BloomFilter.hh"
 #include "Options.hh"
@@ -27,6 +28,7 @@
 #include "wrap/coded-stream-wrapper.h"
 
 #include <algorithm>
+#include <iomanip>
 #include <iostream>
 #include <iterator>
 #include <memory>
@@ -730,9 +732,15 @@ namespace orc {
         }
         int num_entries = rowIndex.entry_size();
         size_t column = static_cast<size_t>(stream.column());
+
         for (int j = 0; j < num_entries; j++) {
           const proto::RowIndexEntry& entry = rowIndex.entry(j);
           (*indexStats)[column].push_back(entry.statistics());
+
+          if (column == 1) {
+            Debugger::instance().getRowGroupEntryInfo(
+                {entry.positions(0), entry.positions(1), entry.positions(2), entry.positions(3)});
+          }
         }
       }
       offset += length;
@@ -1479,8 +1487,8 @@ namespace orc {
     // PASS
   }
 
-  InputStream::~InputStream(){
-      // PASS
+  InputStream::~InputStream() {
+    // PASS
   };
 
 }  // namespace orc
