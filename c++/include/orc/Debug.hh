@@ -32,13 +32,22 @@ namespace orc {
     void resetByteCounter();
     void incrementByteCounter();
     void postProcess();
+
     std::size_t getRowGroupStride();
+    void setRowGroupStride(std::size_t rowGroupStride);
 
     void getInfoFromReader(Reader* reader);
     void getRowGroupEntryInfo(const std::array<std::size_t, 4>& positionArray);
 
+    void setCustomMaxLiteralSize(const std::vector<std::size_t>& customMaxLiteralSizeSec,
+                                 const std::vector<std::size_t>& customMaxLiteralSizeNanosec);
+    void updateCustomMaxLiteralSize();
+    std::size_t getCustomMaxLiteralSize();
+
+    void enableCustomMaxLiteralSize(bool flag);
+
    private:
-    Debugger() = default;
+    Debugger();
     ~Debugger() = default;
     Debugger(const Debugger&) = delete;
     Debugger operator=(const Debugger&) = delete;
@@ -49,10 +58,16 @@ namespace orc {
     std::vector<BiuRunLengthInfo> _rlInfoNanosec;
     std::vector<BiuRowGroupInfo> _rgInfoSec;
     std::vector<BiuRowGroupInfo> _rgInfoNanosec;
-    std::size_t _rowGroupStride{10000};
+    std::size_t _rowGroupStride;
     std::size_t _streamOffsetFromFileSec;
     std::size_t _streamBytesSec;
     std::size_t _streamOffsetFromFileNanosec;
     std::size_t _streamBytesNanosec;
+
+    bool _enableCustomMaxLiteralSize{false};
+    std::vector<std::size_t> _customMaxLiteralSizeSec;
+    std::vector<std::size_t> _customMaxLiteralSizeNanosec;
+    std::size_t _customLimitConsumedSec;
+    std::size_t _customLimitConsumedNanosec;
   };
 }  // namespace orc

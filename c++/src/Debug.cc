@@ -1,5 +1,6 @@
 #include <orc/Debug.hh>
 #include <orc/Reader.hh>
+#include "RLEv2.hh"
 
 #include <iomanip>
 #include <iostream>
@@ -10,6 +11,8 @@ namespace orc {
     static Debugger obj;
     return obj;
   }
+
+  Debugger::Debugger() : _rowGroupStride(10000) {}
 
   void Debugger::incrementRGIdx() {
     ++_rowGroupIdx;
@@ -46,6 +49,9 @@ namespace orc {
     } else if (encodeKind == "DELTA") {
       // 2-byte header
       b.encodedBytes = 2 + _byteCounter;
+    } else if (encodeKind == "PATCHED_BASE") {
+      // 4-byte header
+      b.encodedBytes = 4 + _byteCounter;
     }
 
     b.encodeKind = encodeKind;
@@ -159,18 +165,22 @@ namespace orc {
       for (std::size_t i = 0; i < rlVec.size(); ++i) {
         std::size_t numRowsByRuns = numRowsAcc + rlVec[i].numElements;
         std::size_t numRowsbByRowGroups = _rowGroupStride * rowGroupIdx;
-        if (numRowsByRuns > numRowsbByRowGroups) {
-          std::size_t numElementsToSkip = numRowsbByRowGroups - numRowsAcc;
-          std::size_t numElementsToRemain = rlVec[i].numElements - numElementsToSkip;
-          std::cout << ">>> Row group index: " << rowGroupIdx << ", skipping: " << numElementsToSkip
-                    << ", remaining: " << numElementsToRemain << "\n";
-          ++rowGroupIdx;
-        }
+
         std::cout << "    " << std::setw(16) << rlVec[i].encodeKind << std::setw(10)
                   << rlVec[i].numElements;
         if (rlVec[i].numElements != 512) {
-          std::cout << " ***";
+          std::cout << " (not 512)";
         }
+
+        if (numRowsByRuns > numRowsbByRowGroups) {
+          std::size_t numElementsToSkip = numRowsbByRowGroups - numRowsAcc;
+          std::size_t numElementsToRemain = rlVec[i].numElements - numElementsToSkip;
+          std::cout << " --- Row group index: " << rowGroupIdx
+                    << ", skipping: " << numElementsToSkip
+                    << ", remaining: " << numElementsToRemain;
+          ++rowGroupIdx;
+        }
+
         std::cout << "\n";
         numRowsAcc += rlVec[i].numElements;
       }
@@ -184,6 +194,10 @@ namespace orc {
 
   std::size_t Debugger::getRowGroupStride() {
     return _rowGroupStride;
+  }
+
+  void Debugger::setRowGroupStride(std::size_t rowGroupStride) {
+    _rowGroupStride = rowGroupStride;
   }
 
   void Debugger::getInfoFromReader(Reader* reader) {
@@ -213,5 +227,52 @@ namespace orc {
     rgNanosec.offsetFromStream = positionArray[2];
     rgNanosec.numElementsToSkip = positionArray[3];
     _rgInfoNanosec.push_back(std::move(rgNanosec));
+  }
+
+  void Debugger::setCustomMaxLiteralSize(
+      const std::vector<std::size_t>& customMaxLiteralSizeSec,
+      const std::vector<std::size_t>& customMaxLiteralSizeNanosec) {
+    _customMaxLiteralSizeSec = customMaxLiteralSizeSec;
+    _customMaxLiteralSizeNanosec = customMaxLiteralSizeNanosec;
+
+    _customLimitConsumedSec = 0;
+    _customLimitConsumedNanosec = 0;
+  }
+
+  std::size_t Debugger::getCustomMaxLiteralSize() {
+    if (!_enableCustomMaxLiteralSize) return MAX_LITERAL_SIZE;
+
+    std::size_t ans{};
+    if (_isSec) {
+      if (_customLimitConsumedSec >= _customMaxLiteralSizeSec.size()) {
+        ans = MAX_LITERAL_SIZE;
+      } else {
+        ans = _customMaxLiteralSizeSec[_customLimitConsumedSec];
+      }
+    } else {
+      if (_customLimitConsumedNanosec >= _customMaxLiteralSizeNanosec.size()) {
+        ans = MAX_LITERAL_SIZE;
+      } else {
+        ans = _customMaxLiteralSizeNanosec[_customLimitConsumedNanosec];
+      }
+    }
+
+    return ans;
+  }
+
+  void Debugger::updateCustomMaxLiteralSize() {
+    if (_isSec) {
+      if (_customLimitConsumedSec < _customMaxLiteralSizeSec.size()) {
+        ++_customLimitConsumedSec;
+      }
+    } else {
+      if (_customLimitConsumedNanosec < _customMaxLiteralSizeNanosec.size()) {
+        ++_customLimitConsumedNanosec;
+      }
+    }
+  }
+
+  void Debugger::enableCustomMaxLiteralSize(bool flag) {
+    _enableCustomMaxLiteralSize = flag;
   }
 }  // namespace orc

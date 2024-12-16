@@ -48,6 +48,9 @@ namespace orc {
     return result;
   }
 
+  // For a total number of bsz bytes, convert the endianness from big to small
+  // by reversing the byte order of the data (bit order remains the same).
+  // Bytes read earlier are higher significant bytes.
   int64_t RleDecoderV2::readLongBE(uint64_t bsz) {
     int64_t ret = 0, val;
     uint64_t n = bsz;
@@ -63,6 +66,9 @@ namespace orc {
     return unZigZag(readVulong());
   }
 
+  // Read the stream until the most significant bit of a byte is 0,
+  // indicating the final byte of a data.
+  // Bytes read earlier are lower significant bytes.
   uint64_t RleDecoderV2::readVulong() {
     uint64_t ret = 0, b;
     uint64_t offset = 0;
@@ -310,6 +316,8 @@ namespace orc {
       // patch gap width is one off
       pgw += 1;
 
+      Debugger::instance().resetByteCounter();
+
       // extract the length of the patch list
       size_t pl = fourthByte & 0x1f;
       if (pl == 0) {
@@ -350,6 +358,8 @@ namespace orc {
       int64_t patch = 0;
       uint64_t patchIdx = 0;
       adjustGapAndPatch(patchBitSize, patchMask, &gap, &patch, &patchIdx);
+
+      Debugger::instance().addNewRL(bitSize, runLength, "PATCHED_BASE");
 
       for (uint64_t i = 0; i < runLength; ++i) {
         if (static_cast<int64_t>(i) != gap) {

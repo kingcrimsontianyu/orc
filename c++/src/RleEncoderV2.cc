@@ -22,6 +22,8 @@
 #include "RLEV2Util.hh"
 #include "RLEv2.hh"
 
+#include "orc/Debug.hh"
+
 #define MAX_SHORT_REPEAT_LENGTH 10
 
 namespace orc {
@@ -162,7 +164,8 @@ namespace orc {
       literals[numLiterals++] = val;
       variableRunLength++;
 
-      if (variableRunLength == MAX_LITERAL_SIZE) {
+      if (variableRunLength == Debugger::instance().getCustomMaxLiteralSize()) {
+        Debugger::instance().updateCustomMaxLiteralSize();
         determineEncoding(option);
         writeValues(option);
       }

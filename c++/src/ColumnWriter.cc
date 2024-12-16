@@ -16,6 +16,7 @@
  * limitations under the License.
  */
 
+#include "orc/Debug.hh"
 #include "orc/Int128.hh"
 #include "orc/Writer.hh"
 
@@ -1734,8 +1735,13 @@ namespace orc {
       tsStats->setHasNull(true);
     }
 
+    Debugger::instance().enableCustomMaxLiteralSize(true);
+    Debugger::instance().setIsSec(true);
     secRleEncoder->add(secs, numValues, notNull);
+
+    Debugger::instance().setIsSec(false);
     nanoRleEncoder->add(nanos, numValues, notNull);
+    Debugger::instance().enableCustomMaxLiteralSize(false);
   }
 
   void TimestampColumnWriter::flush(std::vector<proto::Stream>& streams) {

@@ -32,6 +32,8 @@ void printContents(const char* filename, const orc::RowReaderOptions& rowReaderO
   orc::Debugger::instance().getInfoFromReader(reader.get());
   rowReader = reader->createRowReader(rowReaderOpts);
 
+  orc::Debugger::instance().setRowGroupStride(reader->getRowIndexStride());
+
   std::unique_ptr<orc::ColumnVectorBatch> batch =
       rowReader->createRowBatch(orc::Debugger::instance().getRowGroupStride());
   std::string line;

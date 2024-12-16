@@ -17,6 +17,7 @@
  */
 
 #include "Timezone.hh"
+#include "orc/Debug.hh"
 #include "orc/Exceptions.hh"
 #include "orc/OrcFile.hh"
 
@@ -270,8 +271,12 @@ int main(int argc, char* argv[]) {
   std::string timezoneName = "GMT";
   uint64_t stripeSize = (128 << 20);  // 128M
   uint64_t blockSize = 64 << 10;      // 64K
-  uint64_t batchSize = 1024;
-  orc::CompressionKind compression = orc::CompressionKind_ZLIB;
+  uint64_t batchSize = 1536;
+  orc::Debugger::instance().setRowGroupStride(batchSize);
+  orc::Debugger::instance().setCustomMaxLiteralSize({512, 512, 412, 512, 512, 200},
+                                                    {512, 512, 100, 512, 100, 512, 412});
+  orc::CompressionKind compression =
+      orc::CompressionKind_NONE;  // Todo: decoding data discrepancy for SNAPPY
 
   static struct option longOptions[] = {{"help", no_argument, nullptr, 'h'},
                                         {"metrics", no_argument, nullptr, 'm'},
@@ -353,6 +358,7 @@ int main(int argc, char* argv[]) {
   options.setCompression(compression);
   options.setTimezoneName(timezoneName);
   options.setWriterMetrics(showMetrics ? &metrics : nullptr);
+  options.setRowIndexStride(orc::Debugger::instance().getRowGroupStride());
 
   std::unique_ptr<orc::OutputStream> outStream = orc::writeLocalFile(output);
   std::unique_ptr<orc::Writer> writer = orc::createWriter(*fileType, outStream.get(), options);
