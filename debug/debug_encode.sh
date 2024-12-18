@@ -4,8 +4,13 @@ my_debugger=gdb
 
 root_dir=~/biubiu/debug_orc
 
+# csv_file=timestamp_desync.csv
+# orc_file=timestamp_desync_v1.orc
+# orc_file=timestamp_desync_snappy_v1.orc
+
 csv_file=timestamp_desync.csv
-orc_file=timestamp_desync.orc
+# orc_file=timestamp_desync.orc
+orc_file=timestamp_desync_snappy.orc
 
 # csv_file=timestamp_desync_with_null.csv
 # orc_file=timestamp_desync_with_null.orc

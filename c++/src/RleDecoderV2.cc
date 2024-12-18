@@ -461,21 +461,6 @@ namespace orc {
                                             const char* notNull) {
     uint64_t nRead = std::min(runLength - runRead, numValues);
 
-    // if (runRead != 0) {
-    //   std::string prefix;
-    //   if (Debugger::instance().isSec()) {
-    //     prefix = "SECOND";
-    //     std::cout << "--> " << prefix
-    //               << ": continue using the decompressed run from the last batch. Remaining: "
-    //               << runLength - runRead << ", numValues: " << numValues << "\n";
-    //   } else {
-    //     prefix = "NANO";
-    //     std::cout << "--> " << prefix
-    //               << ": continue using the decompressed run from the last batch. Remaining: "
-    //               << runLength - runRead << ", numValues: " << numValues << "\n";
-    //   }
-    // }
-
     if (notNull) {
       for (uint64_t i = offset; i < (offset + nRead); ++i) {
         if (notNull[i]) {

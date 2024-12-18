@@ -20,6 +20,7 @@
 #include "Adaptor.hh"
 #include "Compression.hh"
 #include "Utils.hh"
+#include "orc/Debug.hh"
 #include "orc/Exceptions.hh"
 
 #include <algorithm>
@@ -146,6 +147,7 @@ namespace orc {
       bufferStart = static_cast<const char*>(bufferPointer);
       bufferEnd = bufferStart + bufferLength;
     }
+    Debugger::instance().incrementByteCounter();
     return static_cast<signed char>(*(bufferStart++));
   }
 
@@ -230,6 +232,9 @@ namespace orc {
   template <typename T>
   void RleDecoderV1::next(T* const data, const uint64_t numValues, const char* const notNull) {
     SCOPED_STOPWATCH(metrics, DecodingLatencyUs, DecodingCall);
+
+    Debugger::instance().resetByteCounter();
+
     uint64_t position = 0;
     // skipNulls()
     if (notNull) {

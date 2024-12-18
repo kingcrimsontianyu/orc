@@ -15,8 +15,12 @@ hive_bin=$hadoop_dir/apache-hive-4.0.1-bin/bin/hive
 # orc_file=data/cudf_col_b_only.orc
 # orc_file=data/timestamp_bug.snappy.orc
 # orc_file=sample.orc
-orc_file=sample_csvImport.orc
+# orc_file=sample_csvImport.orc
 # orc_file=sampleWithNull.orc
+# orc_file=timestamp_desync.orc
+# orc_file=timestamp_desync_v1.orc
+orc_file=timestamp_desync_snappy.orc
+# orc_file=timestamp_desync_with_null_ref.orc
 
 # -t: print the timezone id of the writer
 # -j: print the ORC file metadata in JSON format

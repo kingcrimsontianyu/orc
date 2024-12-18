@@ -47,15 +47,15 @@ class Analyzer:
 
 
 if __name__ == "__main__":
-    csvPath = "timestamp_desync.csv"
-    orcPath = "timestamp_desync_ref.orc"
-    hasNull = False
-    includeMyIdx = False
-
-    # csvPath = "timestamp_desync_with_null.csv"
-    # orcPath = "timestamp_desync_with_null_ref.orc"
-    # hasNull = True
+    # csvPath = "timestamp_desync.csv"
+    # orcPath = "timestamp_desync_ref.orc"
+    # hasNull = False
     # includeMyIdx = False
+
+    csvPath = "timestamp_desync_with_null.csv"
+    orcPath = "timestamp_desync_with_null_ref.orc"
+    hasNull = True
+    includeMyIdx = True
 
     aobj = Analyzer(csvPath, orcPath, hasNull, includeMyIdx)
     aobj.doIt()

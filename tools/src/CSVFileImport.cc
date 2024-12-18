@@ -276,7 +276,7 @@ int main(int argc, char* argv[]) {
   orc::Debugger::instance().setCustomMaxLiteralSize({512, 512, 412, 512, 512, 200},
                                                     {512, 512, 100, 512, 100, 512, 412});
   orc::CompressionKind compression =
-      orc::CompressionKind_NONE;  // Todo: decoding data discrepancy for SNAPPY
+      orc::CompressionKind_SNAPPY;  // Todo: decoding data discrepancy for SNAPPY
 
   static struct option longOptions[] = {{"help", no_argument, nullptr, 'h'},
                                         {"metrics", no_argument, nullptr, 'm'},
@@ -353,6 +353,10 @@ int main(int argc, char* argv[]) {
 
   orc::WriterOptions options;
   orc::WriterMetrics metrics;
+
+  // Change RLE version
+  options.setFileVersion(orc::FileVersion::v_0_12());
+
   options.setStripeSize(stripeSize);
   options.setCompressionBlockSize(blockSize);
   options.setCompression(compression);
