@@ -275,4 +275,11 @@ namespace orc {
   void Debugger::enableCustomMaxLiteralSize(bool flag) {
     _enableCustomMaxLiteralSize = flag;
   }
+
+  std::string Debugger::handleSpecialNullData(const std::string& s) {
+    if (s == "\"\"") {
+      return "";
+    }
+    return s;
+  }
 }  // namespace orc

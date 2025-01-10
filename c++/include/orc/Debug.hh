@@ -46,6 +46,10 @@ namespace orc {
 
     void enableCustomMaxLiteralSize(bool flag);
 
+    // The null data in CSV may be "", represented as a string "\"\"".
+    // If this happens, change it to "". Otherwise, return the original string.
+    static std::string handleSpecialNullData(const std::string& s);
+
    private:
     Debugger();
     ~Debugger() = default;

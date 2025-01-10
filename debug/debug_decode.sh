@@ -9,8 +9,8 @@ root_dir=~/biubiu/debug_orc
 # orc_file=$root_dir/data/cudf_col_b_only.orc
 # orc_file=$root_dir/data/mini.orc
 # orc_file=timestamp_desync_v1.orc
-orc_file=timestamp_desync_snappy.orc
-# orc_file=timestamp_desync_with_null.orc
+# orc_file=timestamp_desync_snappy.orc
+orc_file=timestamp_desync_with_null.orc
 
 orc_bin=$root_dir/orc/install-debug/bin/orc-contents
 # $my_debugger -ex start -ex 'source breakpoints_decode' --args $orc_bin $orc_file

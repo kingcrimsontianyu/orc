@@ -26,8 +26,7 @@ class Analyzer:
         initialTime = np.datetime64("2000-01-21T03:30")
         deltaTime = np.timedelta64(1000001, "us")
         for idx in range(len(x)):
-            # Make even rows contain null values, if enabled
-            if self.hasNull and idx % 2 == 0:
+            if self.hasNull and idx % 100 == 0:
                 x[idx] = np.datetime64("nat")
             else:
                 x[idx] = initialTime + idx * deltaTime
@@ -43,7 +42,7 @@ class Analyzer:
         df.to_csv(self.csvPath, header=False, index=False)
 
         # Reduce the row group size!!!
-        df.to_orc(self.orcPath, engine_kwargs={"row_index_stride": 1536})
+        # df.to_orc(self.orcPath, engine_kwargs={"row_index_stride": 1536})
 
 
 if __name__ == "__main__":
@@ -55,7 +54,7 @@ if __name__ == "__main__":
     csvPath = "timestamp_desync_with_null.csv"
     orcPath = "timestamp_desync_with_null_ref.orc"
     hasNull = True
-    includeMyIdx = True
+    includeMyIdx = False
 
     aobj = Analyzer(csvPath, orcPath, hasNull, includeMyIdx)
     aobj.doIt()

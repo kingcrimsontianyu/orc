@@ -38,12 +38,19 @@ if __name__ == "__main__":
     # orcPath = "timestamp_desync_snappy.orc"
     # orcPath = "timestamp_desync_v1.orc"
     # orcPath = "timestamp_desync_snappy_v1.orc"
+    # orcPath = "timestamp_desync_with_null.orc"
+    # orcPath = "TestOrcFile.timestamp.desynced.snappy.RLEv2.hasNull.orc"
+    # orcPath = "TestOrcFile.timestamp.desynced.uncompressed.RLEv2.hasNull.orc"
 
     targetDir = "/home/biubiuty/biubiu/rapids/cudf/python/cudf/cudf/tests/data/orc/"
     # orcPath = targetDir + "TestOrcFile.timestamp.desynced.uncompressed.RLEv1.orc"
     # orcPath = targetDir + "TestOrcFile.timestamp.desynced.snappy.RLEv1.orc"
     # orcPath = targetDir + "TestOrcFile.timestamp.desynced.uncompressed.RLEv2.orc"
-    orcPath = targetDir + "TestOrcFile.timestamp.desynced.snappy.RLEv2.orc"
+    # orcPath = targetDir + "TestOrcFile.timestamp.desynced.snappy.RLEv2.orc"
+    # orcPath = (
+    #     targetDir + "TestOrcFile.timestamp.desynced.uncompressed.RLEv2.hasNull.orc"
+    # )
+    orcPath = targetDir + "TestOrcFile.timestamp.desynced.snappy.RLEv2.hasNull.orc"
 
     paObj = PyarrowManager(orcPath)
     paObj.doIt()

@@ -225,6 +225,8 @@ void fillTimestampValues(const std::vector<std::string>& data, orc::ColumnVector
   bool hasNull = false;
   for (uint64_t i = 0; i < numValues; ++i) {
     std::string col = extractColumn(data[i], colIndex);
+    col = orc::Debugger::handleSpecialNullData(col);
+
     if (col.empty()) {
       batch->notNull[i] = 0;
       hasNull = true;
@@ -275,8 +277,9 @@ int main(int argc, char* argv[]) {
   orc::Debugger::instance().setRowGroupStride(batchSize);
   orc::Debugger::instance().setCustomMaxLiteralSize({512, 512, 412, 512, 512, 200},
                                                     {512, 512, 100, 512, 100, 512, 412});
-  orc::CompressionKind compression =
-      orc::CompressionKind_SNAPPY;  // Todo: decoding data discrepancy for SNAPPY
+  orc::CompressionKind compression = orc::CompressionKind_NONE;
+  //   orc::CompressionKind compression =
+  //       orc::CompressionKind_SNAPPY;  // Todo: decoding data discrepancy for SNAPPY
 
   static struct option longOptions[] = {{"help", no_argument, nullptr, 'h'},
                                         {"metrics", no_argument, nullptr, 'm'},
