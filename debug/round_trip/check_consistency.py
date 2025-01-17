@@ -12,7 +12,7 @@ class Checker:
 
     def check(self):
         dfInput = pd.read_orc(self.orcInputPath)
-        dfOutput = pd.read_orc(self.orcInputPath)
+        dfOutput = pd.read_orc(self.orcOutputPath)
         print(f"--> input: {self.orcInputPath}")
         print(f"    output: {self.orcOutputPath}")
         print(f"    equal?: {dfInput.equals(dfOutput)}")

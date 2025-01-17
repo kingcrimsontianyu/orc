@@ -39,6 +39,7 @@ class PandasManager(BaseManager):
             engine="pyarrow",
             engine_kwargs={"compression": "uncompressed"},
         )
+        print(df)
 
 
 class CudfManager(BaseManager):
@@ -49,6 +50,7 @@ class CudfManager(BaseManager):
     def doIt(self):
         df = cudf.read_orc(self.inputOrcPath)
         df.to_orc(self.outputOrcPath, compression=None)
+        print(df)
 
 
 class PyarrowManager(BaseManager):
@@ -62,6 +64,7 @@ class PyarrowManager(BaseManager):
 
         writer = pyarrow.orc.ORCWriter(self.outputOrcPath, compression="uncompressed")
         writer.write(myDf)
+        print(myDf)
 
 
 if __name__ == "__main__":
