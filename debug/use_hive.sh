@@ -22,7 +22,8 @@ hive_bin=$hadoop_dir/apache-hive-4.0.1-bin/bin/hive
 # orc_file=timestamp_desync_snappy.orc
 # orc_file=timestamp_desync_with_null_ref.orc
 # orc_file=timestamp_desync_with_null.orc
-orc_file=/home/biubiuty/biubiu/rapids/cudf/python/cudf/cudf/tests/data/orc/TestOrcFile.timestamp.desynced.snappy.RLEv2.orc
+# orc_file=/home/biubiuty/biubiu/rapids/cudf/python/cudf/cudf/tests/data/orc/TestOrcFile.timestamp.desynced.snappy.RLEv2.orc
+orc_file="round_trip/timestamp_bug.snappy.orc"
 
 # -t: print the timezone id of the writer
 # -j: print the ORC file metadata in JSON format
