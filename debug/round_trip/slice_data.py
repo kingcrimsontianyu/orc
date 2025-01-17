@@ -22,8 +22,7 @@ class PandasManager:
         if self.isSubset:
             outputPath = "subset_" + outputPath
 
-        df.to_orc(outputPath, engine_kwargs={
-                  "compression": "UNCOMPRESSED"})
+        df.to_orc(outputPath, engine_kwargs={"compression": "UNCOMPRESSED"})
 
         df = pd.read_orc(outputPath)
         print(df)
@@ -31,7 +30,7 @@ class PandasManager:
 
 if __name__ == "__main__":
     orcPath = "timestamp_bug.snappy.orc"
-    isSubset = True
+    isSubset = False
 
     pdObj = PandasManager(orcPath, isSubset)
     pdObj.subSetByCol()

@@ -31,7 +31,8 @@ class Inspector:
 
 
 if __name__ == "__main__":
-    orcPathList = ["subset_cudf.orc", "subset_pandas_pyarrow.orc", "subset_pyarrow.orc"]
+    orcPathList = ["cudf.orc", "pandas_pyarrow.orc", "pyarrow.orc"]
+    # orcPathList = ["subset_cudf.orc", "subset_pandas_pyarrow.orc", "subset_pyarrow.orc"]
 
     for orcPath in orcPathList:
         ins = Inspector(orcPath)

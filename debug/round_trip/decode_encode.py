@@ -8,9 +8,9 @@ import subprocess
 
 
 class BaseManager:
-    def __init__(self, inputOrcPath):
+    def __init__(self, inputOrcPath, outputOrcPath=None):
         self.inputOrcPath = inputOrcPath
-        self.outputOrcPath = None
+        self.outputOrcPath = outputOrcPath
 
     @staticmethod
     def inspect(filePath):
@@ -28,21 +28,22 @@ class BaseManager:
 
 
 class PandasManager(BaseManager):
-    def __init__(self, inputOrcPath):
-        super().__init__(inputOrcPath)
-        self.outputOrcPath = "subset_pandas_pyarrow.orc"
+    def __init__(self, inputOrcPath, outputOrcPath):
+        super().__init__(inputOrcPath, outputOrcPath)
         print(f"pandas version: {pd.__version__}")
 
     def doIt(self):
         df = pd.read_orc(self.inputOrcPath)
-        df.to_orc(self.outputOrcPath, engine="pyarrow",
-                  engine_kwargs={"compression": "uncompressed"})
+        df.to_orc(
+            self.outputOrcPath,
+            engine="pyarrow",
+            engine_kwargs={"compression": "uncompressed"},
+        )
 
 
 class CudfManager(BaseManager):
-    def __init__(self, inputOrcPath):
-        super().__init__(inputOrcPath)
-        self.outputOrcPath = "subset_cudf.orc"
+    def __init__(self, inputOrcPath, outputOrcPath):
+        super().__init__(inputOrcPath, outputOrcPath)
         print(f"cudf version: {cudf.__version__}")
 
     def doIt(self):
@@ -51,30 +52,39 @@ class CudfManager(BaseManager):
 
 
 class PyarrowManager(BaseManager):
-    def __init__(self, inputOrcPath):
-        super().__init__(inputOrcPath)
-        self.outputOrcPath = "subset_pyarrow.orc"
+    def __init__(self, inputOrcPath, outputOrcPath):
+        super().__init__(inputOrcPath, outputOrcPath)
         print(f"pyarrow version: {pyarrow.__version__}")
 
     def doIt(self):
         reader = pyarrow.orc.ORCFile(self.inputOrcPath)
         myDf = reader.read()
 
-        writer = pyarrow.orc.ORCWriter(
-            self.outputOrcPath, compression="uncompressed")
+        writer = pyarrow.orc.ORCWriter(self.outputOrcPath, compression="uncompressed")
         writer.write(myDf)
 
 
 if __name__ == "__main__":
-    # orcPath = "col_b_only.orc"
-    orcPath = "subset_col_b_only.orc"
+    orcInputPath = "col_b_only.orc"
+    orcOutputPathList = [
+        "cudf.orc",
+        "pandas_pyarrow.orc",
+        "pyarrow.orc",
+    ]
 
-    BaseManager.inspect(orcPath)
+    # orcInputPath = "subset_col_b_only.orc"
+    # orcOutputPathList = [
+    #     "subset_cudf.orc",
+    #     "subset_pandas_pyarrow.orc",
+    #     "subset_pyarrow.orc",
+    # ]
+
+    BaseManager.inspect(orcInputPath)
 
     managerList = [
-        PandasManager(orcPath),
-        CudfManager(orcPath),
-        PyarrowManager(orcPath),
+        CudfManager(orcInputPath, orcOutputPathList[0]),
+        PandasManager(orcInputPath, orcOutputPathList[1]),
+        PyarrowManager(orcInputPath, orcOutputPathList[2]),
     ]
     for manager in managerList:
         manager.doIt()
