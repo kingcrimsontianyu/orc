@@ -1,0 +1,111 @@
+{
+  "fileName": "data/bad_3_OrcEmptyRowGroup.orc",
+  "fileVersion": "0.12",
+  "writerVersion": "FUTURE",
+  "softwareVersion": "CUDF ",
+  "numberOfRows": 10005,
+  "compression": "SNAPPY",
+  "compressionBufferSize": 262144,
+  "schemaString": "struct<_col0:int>",
+  "schema": {
+    "columnId": 0,
+    "columnType": "STRUCT",
+    "children": {
+      "_col0": {
+        "columnId": 1,
+        "columnType": "INT"
+      }
+    }
+  },
+  "calendar": "Julian/Gregorian",
+  "stripeStatistics": [
+    {
+      "stripeNumber": 1,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 10005,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 5,
+          "hasNull": true,
+          "min": -1,
+          "max": -1,
+          "sum": -5,
+          "type": "LONG"
+        }
+      ]
+    }
+  ],
+  "fileStatistics": [
+    {
+      "columnId": 0,
+      "count": 10005,
+      "hasNull": false
+    },
+    {
+      "columnId": 1,
+      "count": 5,
+      "hasNull": true,
+      "min": -1,
+      "max": -1,
+      "sum": -5,
+      "type": "LONG"
+    }
+  ],
+  "stripes": [
+    {
+      "stripeNumber": 1,
+      "stripeInformation": {
+        "offset": 3,
+        "indexLength": 60,
+        "dataLength": 20,
+        "footerLength": 43,
+        "rowCount": 10005
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 3,
+          "length": 11
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 14,
+          "length": 49
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 63,
+          "length": 15
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 78,
+          "length": 5
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    }
+  ],
+  "fileLength": 245,
+  "paddingLength": 0,
+  "paddingRatio": 0.0,
+  "status": "OK"
+}
