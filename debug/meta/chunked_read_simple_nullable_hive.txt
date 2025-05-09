@@ -1,0 +1,3938 @@
+{
+  "fileName": "data/chunked_read_simple_nullable.orc",
+  "fileVersion": "0.12",
+  "writerVersion": "FUTURE",
+  "softwareVersion": "CUDF ",
+  "numberOfRows": 40000,
+  "compression": "SNAPPY",
+  "compressionBufferSize": 262144,
+  "schemaString": "struct<_col0:int,_col1:bigint>",
+  "schema": {
+    "columnId": 0,
+    "columnType": "STRUCT",
+    "children": {
+      "_col0": {
+        "columnId": 1,
+        "columnType": "INT"
+      },
+      "_col1": {
+        "columnId": 2,
+        "columnType": "LONG"
+      }
+    }
+  },
+  "calendar": "Julian/Gregorian",
+  "stripeStatistics": [
+    {
+      "stripeNumber": 1,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 0,
+          "max": 998,
+          "sum": 374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 0,
+          "max": 999,
+          "sum": 374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 2,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 1000,
+          "max": 1998,
+          "sum": 1124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 1000,
+          "max": 1999,
+          "sum": 1124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 3,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 2000,
+          "max": 2998,
+          "sum": 1874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 2000,
+          "max": 2999,
+          "sum": 1874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 4,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 3000,
+          "max": 3998,
+          "sum": 2624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 3000,
+          "max": 3999,
+          "sum": 2624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 5,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 4000,
+          "max": 4998,
+          "sum": 3374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 4000,
+          "max": 4999,
+          "sum": 3374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 6,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 5000,
+          "max": 5998,
+          "sum": 4124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 5000,
+          "max": 5999,
+          "sum": 4124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 7,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 6000,
+          "max": 6998,
+          "sum": 4874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 6000,
+          "max": 6999,
+          "sum": 4874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 8,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 7000,
+          "max": 7998,
+          "sum": 5624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 7000,
+          "max": 7999,
+          "sum": 5624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 9,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 8000,
+          "max": 8998,
+          "sum": 6374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 8000,
+          "max": 8999,
+          "sum": 6374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 10,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 9000,
+          "max": 9998,
+          "sum": 7124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 9000,
+          "max": 9999,
+          "sum": 7124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 11,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 10000,
+          "max": 10998,
+          "sum": 7874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 10000,
+          "max": 10999,
+          "sum": 7874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 12,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 11000,
+          "max": 11998,
+          "sum": 8624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 11000,
+          "max": 11999,
+          "sum": 8624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 13,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 12000,
+          "max": 12998,
+          "sum": 9374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 12000,
+          "max": 12999,
+          "sum": 9374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 14,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 13000,
+          "max": 13998,
+          "sum": 10124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 13000,
+          "max": 13999,
+          "sum": 10124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 15,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 14000,
+          "max": 14998,
+          "sum": 10874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 14000,
+          "max": 14999,
+          "sum": 10874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 16,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 15000,
+          "max": 15998,
+          "sum": 11624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 15000,
+          "max": 15999,
+          "sum": 11624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 17,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 16000,
+          "max": 16998,
+          "sum": 12374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 16000,
+          "max": 16999,
+          "sum": 12374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 18,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 17000,
+          "max": 17998,
+          "sum": 13124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 17000,
+          "max": 17999,
+          "sum": 13124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 19,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 18000,
+          "max": 18998,
+          "sum": 13874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 18000,
+          "max": 18999,
+          "sum": 13874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 20,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 19000,
+          "max": 19998,
+          "sum": 14624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 19000,
+          "max": 19999,
+          "sum": 14624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 21,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 20000,
+          "max": 20998,
+          "sum": 15374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 20000,
+          "max": 20999,
+          "sum": 15374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 22,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 21000,
+          "max": 21998,
+          "sum": 16124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 21000,
+          "max": 21999,
+          "sum": 16124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 23,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 22000,
+          "max": 22998,
+          "sum": 16874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 22000,
+          "max": 22999,
+          "sum": 16874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 24,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 23000,
+          "max": 23998,
+          "sum": 17624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 23000,
+          "max": 23999,
+          "sum": 17624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 25,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 24000,
+          "max": 24998,
+          "sum": 18374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 24000,
+          "max": 24999,
+          "sum": 18374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 26,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 25000,
+          "max": 25998,
+          "sum": 19124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 25000,
+          "max": 25999,
+          "sum": 19124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 27,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 26000,
+          "max": 26998,
+          "sum": 19874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 26000,
+          "max": 26999,
+          "sum": 19874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 28,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 27000,
+          "max": 27998,
+          "sum": 20624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 27000,
+          "max": 27999,
+          "sum": 20624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 29,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 28000,
+          "max": 28998,
+          "sum": 21374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 28000,
+          "max": 28999,
+          "sum": 21374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 30,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 29000,
+          "max": 29998,
+          "sum": 22124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 29000,
+          "max": 29999,
+          "sum": 22124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 31,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 30000,
+          "max": 30998,
+          "sum": 22874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 30000,
+          "max": 30999,
+          "sum": 22874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 32,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 31000,
+          "max": 31998,
+          "sum": 23624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 31000,
+          "max": 31999,
+          "sum": 23624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 33,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 32000,
+          "max": 32998,
+          "sum": 24374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 32000,
+          "max": 32999,
+          "sum": 24374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 34,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 33000,
+          "max": 33998,
+          "sum": 25124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 33000,
+          "max": 33999,
+          "sum": 25124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 35,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 34000,
+          "max": 34998,
+          "sum": 25874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 34000,
+          "max": 34999,
+          "sum": 25874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 36,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 35000,
+          "max": 35998,
+          "sum": 26624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 35000,
+          "max": 35999,
+          "sum": 26624500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 37,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 36000,
+          "max": 36998,
+          "sum": 27374250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 36000,
+          "max": 36999,
+          "sum": 27374500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 38,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 37000,
+          "max": 37998,
+          "sum": 28124250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 37000,
+          "max": 37999,
+          "sum": 28124500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 39,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 38000,
+          "max": 38998,
+          "sum": 28874250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 38000,
+          "max": 38999,
+          "sum": 28874500,
+          "type": "LONG"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 40,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 1000,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 750,
+          "hasNull": true,
+          "min": 39000,
+          "max": 39998,
+          "sum": 29624250,
+          "type": "LONG"
+        },
+        {
+          "columnId": 2,
+          "count": 750,
+          "hasNull": true,
+          "min": 39000,
+          "max": 39999,
+          "sum": 29624500,
+          "type": "LONG"
+        }
+      ]
+    }
+  ],
+  "fileStatistics": [
+    {
+      "columnId": 0,
+      "count": 40000,
+      "hasNull": false
+    },
+    {
+      "columnId": 1,
+      "count": 30000,
+      "hasNull": true,
+      "min": 0,
+      "max": 39998,
+      "sum": 599970000,
+      "type": "LONG"
+    },
+    {
+      "columnId": 2,
+      "count": 30000,
+      "hasNull": true,
+      "min": 0,
+      "max": 39999,
+      "sum": 599980000,
+      "type": "LONG"
+    }
+  ],
+  "stripes": [
+    {
+      "stripeNumber": 1,
+      "stripeInformation": {
+        "offset": 3,
+        "indexLength": 71,
+        "dataLength": 2015,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 3,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 10,
+          "length": 32
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 42,
+          "length": 32
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 74,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 79,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 1075,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 1080,
+          "length": 1009
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 2,
+      "stripeInformation": {
+        "offset": 2162,
+        "indexLength": 75,
+        "dataLength": 2011,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 2162,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 2169,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 2203,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 2237,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 2242,
+          "length": 994
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 3236,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 3241,
+          "length": 1007
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 3,
+      "stripeInformation": {
+        "offset": 4321,
+        "indexLength": 75,
+        "dataLength": 2013,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 4321,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 4328,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 4362,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 4396,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 4401,
+          "length": 995
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 5396,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 5401,
+          "length": 1008
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 4,
+      "stripeInformation": {
+        "offset": 6482,
+        "indexLength": 75,
+        "dataLength": 2011,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 6482,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 6489,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 6523,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 6557,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 6562,
+          "length": 994
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 7556,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 7561,
+          "length": 1007
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 5,
+      "stripeInformation": {
+        "offset": 8641,
+        "indexLength": 75,
+        "dataLength": 2015,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 8641,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 8648,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 8682,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 8716,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 8721,
+          "length": 995
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 9716,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 9721,
+          "length": 1010
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 6,
+      "stripeInformation": {
+        "offset": 10804,
+        "indexLength": 75,
+        "dataLength": 2014,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 10804,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 10811,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 10845,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 10879,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 10884,
+          "length": 995
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 11879,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 11884,
+          "length": 1009
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 7,
+      "stripeInformation": {
+        "offset": 12966,
+        "indexLength": 75,
+        "dataLength": 2011,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 12966,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 12973,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 13007,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 13041,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 13046,
+          "length": 994
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 14040,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 14045,
+          "length": 1007
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 8,
+      "stripeInformation": {
+        "offset": 15125,
+        "indexLength": 75,
+        "dataLength": 2013,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 15125,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 15132,
+          "length": 34
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 15166,
+          "length": 34
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 15200,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 15205,
+          "length": 995
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 16200,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 16205,
+          "length": 1008
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 9,
+      "stripeInformation": {
+        "offset": 17286,
+        "indexLength": 77,
+        "dataLength": 2015,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 17286,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 17293,
+          "length": 35
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 17328,
+          "length": 35
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 17363,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 17368,
+          "length": 995
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 18363,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 18368,
+          "length": 1010
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 10,
+      "stripeInformation": {
+        "offset": 19451,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 19451,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 19458,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 19494,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 19530,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 19535,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 20531,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 20536,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 11,
+      "stripeInformation": {
+        "offset": 21620,
+        "indexLength": 79,
+        "dataLength": 2019,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 21620,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 21627,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 21663,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 21699,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 21704,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 22701,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 22706,
+          "length": 1012
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 12,
+      "stripeInformation": {
+        "offset": 23791,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 23791,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 23798,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 23834,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 23870,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 23875,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 24871,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 24876,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 13,
+      "stripeInformation": {
+        "offset": 25960,
+        "indexLength": 79,
+        "dataLength": 2020,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 25960,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 25967,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 26003,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 26039,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 26044,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 27041,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 27046,
+          "length": 1013
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 14,
+      "stripeInformation": {
+        "offset": 28132,
+        "indexLength": 79,
+        "dataLength": 2021,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 28132,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 28139,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 28175,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 28211,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 28216,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 29213,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 29218,
+          "length": 1014
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 15,
+      "stripeInformation": {
+        "offset": 30305,
+        "indexLength": 79,
+        "dataLength": 2020,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 30305,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 30312,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 30348,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 30384,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 30389,
+          "length": 999
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 31388,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 31393,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 16,
+      "stripeInformation": {
+        "offset": 32477,
+        "indexLength": 79,
+        "dataLength": 2019,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 32477,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 32484,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 32520,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 32556,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 32561,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 33558,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 33563,
+          "length": 1012
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 17,
+      "stripeInformation": {
+        "offset": 34648,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 34648,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 34655,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 34691,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 34727,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 34732,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 35728,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 35733,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 18,
+      "stripeInformation": {
+        "offset": 36817,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 36817,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 36824,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 36860,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 36896,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 36901,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 37897,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 37902,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 19,
+      "stripeInformation": {
+        "offset": 38986,
+        "indexLength": 79,
+        "dataLength": 2019,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 38986,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 38993,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 39029,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 39065,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 39070,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 40067,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 40072,
+          "length": 1012
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 20,
+      "stripeInformation": {
+        "offset": 41157,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 41157,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 41164,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 41200,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 41236,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 41241,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 42237,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 42242,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 21,
+      "stripeInformation": {
+        "offset": 43326,
+        "indexLength": 79,
+        "dataLength": 2020,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 43326,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 43333,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 43369,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 43405,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 43410,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 44407,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 44412,
+          "length": 1013
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 22,
+      "stripeInformation": {
+        "offset": 45498,
+        "indexLength": 79,
+        "dataLength": 2023,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 45498,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 45505,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 45541,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 45577,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 45582,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 46579,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 46584,
+          "length": 1016
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 23,
+      "stripeInformation": {
+        "offset": 47673,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 47673,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 47680,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 47716,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 47752,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 47757,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 48753,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 48758,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 24,
+      "stripeInformation": {
+        "offset": 49842,
+        "indexLength": 79,
+        "dataLength": 2019,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 49842,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 49849,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 49885,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 49921,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 49926,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 50923,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 50928,
+          "length": 1012
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 25,
+      "stripeInformation": {
+        "offset": 52013,
+        "indexLength": 79,
+        "dataLength": 2020,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 52013,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 52020,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 52056,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 52092,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 52097,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 53093,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 53098,
+          "length": 1014
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 26,
+      "stripeInformation": {
+        "offset": 54185,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 54185,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 54192,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 54228,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 54264,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 54269,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 55265,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 55270,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 27,
+      "stripeInformation": {
+        "offset": 56354,
+        "indexLength": 79,
+        "dataLength": 2019,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 56354,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 56361,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 56397,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 56433,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 56438,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 57435,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 57440,
+          "length": 1012
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 28,
+      "stripeInformation": {
+        "offset": 58525,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 58525,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 58532,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 58568,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 58604,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 58609,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 59605,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 59610,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 29,
+      "stripeInformation": {
+        "offset": 60694,
+        "indexLength": 79,
+        "dataLength": 2022,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 60694,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 60701,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 60737,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 60773,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 60778,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 61775,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 61780,
+          "length": 1015
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 30,
+      "stripeInformation": {
+        "offset": 62868,
+        "indexLength": 79,
+        "dataLength": 2021,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 62868,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 62875,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 62911,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 62947,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 62952,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 63949,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 63954,
+          "length": 1014
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 31,
+      "stripeInformation": {
+        "offset": 65041,
+        "indexLength": 79,
+        "dataLength": 2017,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 65041,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 65048,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 65084,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 65120,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 65125,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 66121,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 66126,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 32,
+      "stripeInformation": {
+        "offset": 67210,
+        "indexLength": 79,
+        "dataLength": 2019,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 67210,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 67217,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 67253,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 67289,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 67294,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 68291,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 68296,
+          "length": 1012
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 33,
+      "stripeInformation": {
+        "offset": 69381,
+        "indexLength": 79,
+        "dataLength": 2018,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 69381,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 69388,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 69424,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 69460,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 69465,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 70462,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 70467,
+          "length": 1011
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 34,
+      "stripeInformation": {
+        "offset": 71551,
+        "indexLength": 79,
+        "dataLength": 2021,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 71551,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 71558,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 71594,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 71630,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 71635,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 72631,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 72636,
+          "length": 1015
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 35,
+      "stripeInformation": {
+        "offset": 73724,
+        "indexLength": 79,
+        "dataLength": 2023,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 73724,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 73731,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 73767,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 73803,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 73808,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 74805,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 74810,
+          "length": 1016
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 36,
+      "stripeInformation": {
+        "offset": 75899,
+        "indexLength": 79,
+        "dataLength": 2021,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 75899,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 75906,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 75942,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 75978,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 75983,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 76979,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 76984,
+          "length": 1015
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 37,
+      "stripeInformation": {
+        "offset": 78072,
+        "indexLength": 79,
+        "dataLength": 2026,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 78072,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 78079,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 78115,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 78151,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 78156,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 79153,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 79158,
+          "length": 1019
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 38,
+      "stripeInformation": {
+        "offset": 80250,
+        "indexLength": 79,
+        "dataLength": 2025,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 80250,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 80257,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 80293,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 80329,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 80334,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 81331,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 81336,
+          "length": 1018
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 39,
+      "stripeInformation": {
+        "offset": 82427,
+        "indexLength": 79,
+        "dataLength": 2021,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 82427,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 82434,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 82470,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 82506,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 82511,
+          "length": 996
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 83507,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 83512,
+          "length": 1015
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    },
+    {
+      "stripeNumber": 40,
+      "stripeInformation": {
+        "offset": 84600,
+        "indexLength": 79,
+        "dataLength": 2023,
+        "footerLength": 73,
+        "rowCount": 1000
+      },
+      "writerTimezone": "UNKNOWN",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 84600,
+          "length": 7
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 84607,
+          "length": 36
+        },
+        {
+          "columnId": 2,
+          "section": "ROW_INDEX",
+          "startOffset": 84643,
+          "length": 36
+        },
+        {
+          "columnId": 1,
+          "section": "PRESENT",
+          "startOffset": 84679,
+          "length": 5
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 84684,
+          "length": 997
+        },
+        {
+          "columnId": 2,
+          "section": "PRESENT",
+          "startOffset": 85681,
+          "length": 5
+        },
+        {
+          "columnId": 2,
+          "section": "DATA",
+          "startOffset": 85686,
+          "length": 1016
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        },
+        {
+          "columnId": 2,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    }
+  ],
+  "fileLength": 89621,
+  "paddingLength": 0,
+  "paddingRatio": 0.0,
+  "status": "OK"
+}

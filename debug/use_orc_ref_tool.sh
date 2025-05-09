@@ -9,11 +9,12 @@ orc_root=../../install-debug/bin
 data_dir=data
 # orc_file="$data_dir/good_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/special_OrcEmptyRowGroup.orc"
-orc_file="$data_dir/bad_OrcEmptyRowGroup.orc"
+# orc_file="$data_dir/bad_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/bad_2_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/bad_3_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/ref.orc"
 # orc_file="$data_dir/ref.orc"
+orc_file="$data_dir/chunked_read_simple_nullable.orc"
 
 $orc_root/orc-contents $orc_file
 

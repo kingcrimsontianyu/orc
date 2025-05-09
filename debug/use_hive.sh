@@ -12,11 +12,12 @@ hive_bin=$hadoop_dir/apache-hive-4.0.1-bin/bin/hive
 
 data_dir=data
 # orc_file="$data_dir/good_OrcEmptyRowGroup.orc"
-orc_file="$data_dir/special_OrcEmptyRowGroup.orc"
+# orc_file="$data_dir/special_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/bad_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/bad_2_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/bad_3_OrcEmptyRowGroup.orc"
 # orc_file="$data_dir/ref.orc"
+orc_file="$data_dir/chunked_read_simple_nullable.orc"
 
 # -t: print the timezone id of the writer
 # -j: print the ORC file metadata in JSON format

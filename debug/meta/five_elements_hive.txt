@@ -1,0 +1,104 @@
+{
+  "fileName": "data/five_elements.orc",
+  "fileVersion": "0.12",
+  "writerVersion": "ORC_CPP_ORIGINAL",
+  "softwareVersion": "ORC C++ 2.0.0",
+  "numberOfRows": 5,
+  "compression": "NONE",
+  "schemaString": "struct<biu:bigint>",
+  "schema": {
+    "columnId": 0,
+    "columnType": "STRUCT",
+    "children": {
+      "biu": {
+        "columnId": 1,
+        "columnType": "LONG"
+      }
+    }
+  },
+  "calendar": "Julian/Gregorian",
+  "stripeStatistics": [
+    {
+      "stripeNumber": 1,
+      "columnStatistics": [
+        {
+          "columnId": 0,
+          "count": 5,
+          "hasNull": false
+        },
+        {
+          "columnId": 1,
+          "count": 5,
+          "hasNull": false,
+          "min": 1,
+          "max": 1,
+          "sum": 5,
+          "type": "LONG"
+        }
+      ]
+    }
+  ],
+  "fileStatistics": [
+    {
+      "columnId": 0,
+      "count": 5,
+      "hasNull": false
+    },
+    {
+      "columnId": 1,
+      "count": 5,
+      "hasNull": false,
+      "min": 1,
+      "max": 1,
+      "sum": 5,
+      "type": "LONG"
+    }
+  ],
+  "stripes": [
+    {
+      "stripeNumber": 1,
+      "stripeInformation": {
+        "offset": 3,
+        "indexLength": 28,
+        "dataLength": 2,
+        "footerLength": 41,
+        "rowCount": 5
+      },
+      "writerTimezone": "GMT",
+      "streams": [
+        {
+          "columnId": 0,
+          "section": "ROW_INDEX",
+          "startOffset": 3,
+          "length": 8
+        },
+        {
+          "columnId": 1,
+          "section": "ROW_INDEX",
+          "startOffset": 11,
+          "length": 20
+        },
+        {
+          "columnId": 1,
+          "section": "DATA",
+          "startOffset": 31,
+          "length": 2
+        }
+      ],
+      "encodings": [
+        {
+          "columnId": 0,
+          "kind": "DIRECT"
+        },
+        {
+          "columnId": 1,
+          "kind": "DIRECT_V2"
+        }
+      ]
+    }
+  ],
+  "fileLength": 198,
+  "paddingLength": 0,
+  "paddingRatio": 0.0,
+  "status": "OK"
+}
